@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    android:orientation="vertical"
+    tools:context=".ListOfOrderActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Orders List"
+                android:textColor="#D7B46D"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:id="@+id/img_notification"
+                android:src="@drawable/notification"/>
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_background_color"
+        android:layout_marginTop="@dimen/_20sdp">
+
+
+        <EditText
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="wrap_content"
+            android:hint="Search..."
+            android:id="@+id/et_search"
+            android:background="#00000000"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/_13sdp" />
+
+
+
+    </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:orientation="vertical">
+
+                                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/swipeRefresh">
+                                            <androidx.recyclerview.widget.RecyclerView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/rv_ListOfProducts"/>
+                                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                                </LinearLayout>
+
+
+</LinearLayout>

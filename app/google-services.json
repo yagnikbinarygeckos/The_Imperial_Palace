@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "619510707223",
+    "project_id": "imperial-palace-8a4b8",
+    "storage_bucket": "imperial-palace-8a4b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619510707223:android:699cb3e0e4e78c7bb4d852",
+        "android_client_info": {
+          "package_name": "com.app.theimperialpalace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619510707223-m54csu0vi4pcqj6t1luc46v4qa2j3k4l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.theimperialpalace",
+            "certificate_hash": "b930a8046336d769468cfd4094716735a4180e91"
+          }
+        },
+        {
+          "client_id": "619510707223-igtved038etpd13ka6jsd5nfehkv62n4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ803BZicksL-7qbm_vaoiexJMP5Ze_8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619510707223-igtved038etpd13ka6jsd5nfehkv62n4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
