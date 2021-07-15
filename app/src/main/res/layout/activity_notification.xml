@@ -20,7 +20,7 @@
                 android:textAlignment="center"
                 android:textSize="@dimen/_15sdp"
                 android:textStyle="bold"
-                android:textColor="#D7B46D"/>
+                android:textColor="#7B0100"/>
 
     </LinearLayout>
     <LinearLayout

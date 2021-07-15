@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#7B0100"
     tools:context=".MainActivity">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="400dp"
         android:layout_height="153dp"
         android:layout_centerInParent="true"
-        app:srcCompat="@drawable/mainlogo" />
+        app:srcCompat="@drawable/mainlogospl" />
 </RelativeLayout>
