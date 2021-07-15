@@ -106,6 +106,10 @@ public class LoginActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(LoginActivity.this,ListOfOrderActivity.class);
                     SharedPrefsUtils.setSharedPreferenceString(getApplicationContext(), SharedPrefsUtils.USER_ID,response.body().getUserId().toString());
+                    SharedPrefsUtils.setSharedPreferenceString(getApplicationContext(),SharedPrefsUtils.EMAIL,response.body().getEmail().toString());
+                    SharedPrefsUtils.setSharedPreferenceString(getApplicationContext(),SharedPrefsUtils.PASSWORD,et_Password.getText().toString());
+                    SharedPrefsUtils.setSharedPreferenceString(getApplicationContext(),"login","1");
+                    intent.putExtra("t_profile","0");
                     Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);

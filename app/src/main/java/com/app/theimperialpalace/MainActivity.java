@@ -41,8 +41,20 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 } finally {
 
-                    Intent intent = new Intent(MainActivity.this,LoginActivity.class);
-                    startActivity(intent);
+
+                    if (SharedPrefsUtils.getSharedPreferenceString(getApplicationContext(),"login").equals("1")){
+                        Intent intent = new Intent(getApplicationContext(), ListOfOrderActivity.class);
+                        intent.putExtra("t_profile","0");
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+                        startActivity(intent);
+                    }
+
+
 
 
                 }

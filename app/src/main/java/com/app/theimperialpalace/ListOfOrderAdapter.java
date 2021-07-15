@@ -82,50 +82,21 @@ public class ListOfOrderAdapter extends RecyclerView.Adapter<ListOfOrderAdapter.
         }
 
 
+        for (int i =0; i < arrayList.get(position).getProductDetails().size();i++){
+            arraylist_Details.add(arrayList.get(position).getProductDetails().get(i));
+        }
 
+        holder.rv_orderDetails.setHasFixedSize(true);
+        orderDetailsAdapter = new OrderDetailsAdapter(context,arraylist_Details);
+        holder.rv_orderDetails.setAdapter(orderDetailsAdapter);
+        holder.rv_orderDetails.setNestedScrollingEnabled(true);
+        @SuppressLint("WrongConstant") RecyclerView.LayoutManager LayoutManager = new LinearLayoutManager(context, LinearLayout.VERTICAL,false);
+        holder.rv_orderDetails.setLayoutManager(LayoutManager);
 
-
-        WebApi webApi = ApiUtils.getClient().create(WebApi.class);
-        Call<ListOfOrderResponse> call = webApi.order_List(
-                SharedPrefsUtils.getSharedPreferenceString(context,SharedPrefsUtils.USER_ID)
-        );
-        call.enqueue(new Callback<ListOfOrderResponse>() {
-            @Override
-            public void onResponse(Call<ListOfOrderResponse> call, Response<ListOfOrderResponse> response) {
-
-                if (response.body().getStatus()==1)
-                {
-                    for (int i =0; i < response.body().getResult().size();i++){
-                        arrayList.add(response.body().getResult().get(i));
-                    }
-
-                    holder.rv_orderDetails.setHasFixedSize(true);
-                    orderDetailsAdapter = new OrderDetailsAdapter(context,arraylist_Details);
-                    holder.rv_orderDetails.setAdapter(orderDetailsAdapter);
-                    holder.rv_orderDetails.setNestedScrollingEnabled(true);
-                    @SuppressLint("WrongConstant") RecyclerView.LayoutManager LayoutManager = new LinearLayoutManager(context, LinearLayout.VERTICAL,false);
-                    holder.rv_orderDetails.setLayoutManager(LayoutManager);
-
-                }
-                else
-                {
-                    Toast.makeText(context, "Order Not Found", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ListOfOrderResponse> call, Throwable t) {
-
-                Toast.makeText(context, "Server Error", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-
-
-
-        
     }
+
+
+
     @Override
     public int getItemCount() {
 

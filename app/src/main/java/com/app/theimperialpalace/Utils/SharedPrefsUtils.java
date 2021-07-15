@@ -8,6 +8,8 @@ public class SharedPrefsUtils {
     private final static String The_Imperial_Palace = "the_imperial_palace";
     private final static String LOGINTOKEN = "login_token";
     private final static String token_new = "token_new";
+    public static final String PASSWORD = "password";
+    public final static String EMAIL = "email";
 
 
 

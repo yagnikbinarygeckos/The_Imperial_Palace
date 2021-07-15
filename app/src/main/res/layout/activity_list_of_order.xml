@@ -68,7 +68,7 @@
         <EditText
             android:layout_width="@dimen/_280sdp"
             android:layout_height="wrap_content"
-            android:hint="Search..."
+            android:hint="Search order"
             android:id="@+id/et_search"
             android:background="#00000000"
             android:paddingLeft="@dimen/_10sdp"
