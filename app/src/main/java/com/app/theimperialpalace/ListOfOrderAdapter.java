@@ -60,6 +60,10 @@ public class ListOfOrderAdapter extends RecyclerView.Adapter<ListOfOrderAdapter.
         holder.tv_orderNo.setText(arrayList.get(position).getOrderNo());
         //holder.tv_status.setText(arrayList.get(position).getStatus());
 
+        holder.tv_address1.setText(arrayList.get(position).getAddress1());
+        holder.tv_address2.setText(arrayList.get(position).getAddress2());
+        holder.tv_landmark.setText(arrayList.get(position).getLandmark());
+
         if (arrayList.get(position).getStatus().equalsIgnoreCase("0")){
             holder.tv_status.setText("Pendding");
 
@@ -106,7 +110,7 @@ public class ListOfOrderAdapter extends RecyclerView.Adapter<ListOfOrderAdapter.
     }
     public class ListOfOrderViewHolder extends RecyclerView.ViewHolder {
         RecyclerView rv_orderDetails;
-        TextView tv_orderId,tv_name,tv_orderNo,tv_status;
+        TextView tv_orderId,tv_name,tv_orderNo,tv_status,tv_address1,tv_address2,tv_landmark;
         CardView card_view;
         public ListOfOrderViewHolder(@NonNull  View itemView) {
             super(itemView);
@@ -116,6 +120,9 @@ public class ListOfOrderAdapter extends RecyclerView.Adapter<ListOfOrderAdapter.
             tv_status = itemView.findViewById(R.id.tv_status);
             card_view = itemView.findViewById(R.id.card_view);
             rv_orderDetails = itemView.findViewById(R.id.rv_orderDetails);
+            tv_address1 = itemView.findViewById(R.id.tv_address1);
+            tv_address2 = itemView.findViewById(R.id.tv_address2);
+            tv_landmark = itemView.findViewById(R.id.tv_landmark);
         }
     }
 

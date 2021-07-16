@@ -64,9 +64,7 @@ public class MyFirebaseMessaging extends FirebaseMessagingService {
             mp =MediaPlayer.create(getApplicationContext(), R.raw.notificationrington);
             mp.start();*/
 
-            Notification notification = mBuilder.build();
-            notification.sound = Uri.parse("android.resource://"
-                    + getApplicationContext().getPackageName() + "/" + R.raw.notificationrington);
+
 
             TaskStackBuilder stackBuilder = TaskStackBuilder.create(getApplicationContext());
             Intent intent = new Intent(getApplicationContext(), ListOfOrderActivity.class);

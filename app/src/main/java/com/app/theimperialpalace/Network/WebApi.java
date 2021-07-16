@@ -33,10 +33,7 @@ public interface WebApi {
     @POST("imp/apis/hotel/orders/user_pending_orders")
     Call<ListOfOrderResponse> order_List(
                                         @Field("user_id") String user_id);
-    @FormUrlEncoded
-    @POST("imp/apis/hotel/orders/user_pending_orders")
-    Call<ListOfOrderResponse.ProductDetail> order_List_details(
-            @Field("user_id") String user_id);
+
 
     @FormUrlEncoded
     @POST("imp/apis/hotel/orders/my_notification")
