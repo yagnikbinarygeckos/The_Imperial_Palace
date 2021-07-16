@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,6 +62,7 @@ public class ListOfOrderAdapter extends RecyclerView.Adapter<ListOfOrderAdapter.
 
         if (arrayList.get(position).getStatus().equalsIgnoreCase("0")){
             holder.tv_status.setText("Pendding");
+
         }
         else if(arrayList.get(position).getStatus().equalsIgnoreCase("1")){
             holder.tv_status.setText("Accept");

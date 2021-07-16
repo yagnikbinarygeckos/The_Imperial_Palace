@@ -1,12 +1,18 @@
 package com.app.theimperialpalace.Utils;
 
 import android.annotation.SuppressLint;
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.TaskStackBuilder;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
@@ -54,6 +60,14 @@ public class MyFirebaseMessaging extends FirebaseMessagingService {
                     .setContentTitle(title)
                     .setContentText(message);
 
+         /*   MediaPlayer mp;
+            mp =MediaPlayer.create(getApplicationContext(), R.raw.notificationrington);
+            mp.start();*/
+
+            Notification notification = mBuilder.build();
+            notification.sound = Uri.parse("android.resource://"
+                    + getApplicationContext().getPackageName() + "/" + R.raw.notificationrington);
+
             TaskStackBuilder stackBuilder = TaskStackBuilder.create(getApplicationContext());
             Intent intent = new Intent(getApplicationContext(), ListOfOrderActivity.class);
             stackBuilder.addNextIntent(intent);
@@ -61,6 +75,8 @@ public class MyFirebaseMessaging extends FirebaseMessagingService {
             mBuilder.setContentIntent(resultPendingIntent);
             mBuilder.setAutoCancel(true);
             notificationManager.notify(notificationId, mBuilder.build());
+
+
 
         } catch (Exception e) {
             e.printStackTrace();
