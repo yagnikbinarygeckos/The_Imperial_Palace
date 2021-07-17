@@ -74,11 +74,11 @@ public class MyFirebaseMessaging extends FirebaseMessagingService {
           /*  Notification notification = mBuilder.build();
             notification.sound = Uri.parse("android.resource://"
                     + getApplicationContext().getPackageName() + "/" + R.raw.notificationrington);*/
-/*
+
             Uri alarmSound = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE
                     + "://" + this.getPackageName() + "/raw/notificationrington");
             Ringtone r = RingtoneManager.getRingtone(this, alarmSound);
-            r.play();*/
+            r.play();
 
          /*   MediaPlayer mp;
             mp =MediaPlayer.create(getApplicationContext(), R.raw.notificationrington);
