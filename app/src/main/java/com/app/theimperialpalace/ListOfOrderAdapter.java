@@ -65,6 +65,7 @@ public class ListOfOrderAdapter extends RecyclerView.Adapter<ListOfOrderAdapter.
         holder.tv_landmark.setText(arrayList.get(position).getLandmark());
 
         if (arrayList.get(position).getStatus().equalsIgnoreCase("0")){
+
             holder.tv_status.setText("Pendding");
 
         }
